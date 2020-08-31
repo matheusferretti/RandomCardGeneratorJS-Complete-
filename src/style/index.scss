@@ -1,59 +1,111 @@
-@import "~bootstrap/scss/bootstrap.scss";
 body {
-  background-color: green;
+  background: #0e7e12;
+  box-sizing: border-box;
 }
 
 .card {
-  background-color: white;
-  width: 400px;
-  height: 600px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 25px;
-  display: inline-block;
+  background: white;
   text-align: center;
-  padding-top: 230px;
-  font-size: 100px;
+  display: inline-block;
+  margin: auto;
+  height: 200px;
+  width: 250px;
+  font-size: 80px;
+  padding: 20px;
+  padding-top: 180px;
+  border-radius: 5px;
+  border: 1px solid black;
+  position: relative;
+  &:before {
+    content: "\2660";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 80px;
+  }
+  &:after {
+    content: "\2660";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 80px;
+  }
+  &.spade:before,
+  &.spade:after {
+    content: "\2660";
+  }
+  &.club:before,
+  &.club:after {
+    content: "\2663";
+  }
+  &.heart:before,
+  &.heart:after {
+    content: "\2665";
+    color: red;
+  }
+  &.diamond:before,
+  &.diamond:after {
+    content: "\2666";
+    color: red;
+  }
 }
 
-.symboltop {
-  position: absolute;
-  top: -35px;
-  left: 20px;
-}
+// @import "~bootstrap/scss/bootstrap.scss";
+// body {
+//   background-color: green;
+// }
 
-.symbolbottom {
-  position: absolute;
-  bottom: -8px;
-  right: 20px;
-}
+// .card {
+//   background-color: white;
+//   width: 400px;
+//   height: 600px;
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   border-radius: 25px;
+//   display: inline-block;
+//   text-align: center;
+//   padding-top: 230px;
+//   font-size: 100px;
+// }
 
-.card.spade.symboltop {
-  content: "\2660";
-}
-.card.spade.symbolbottom {
-  content: "\2660";
-}
+// .symboltop {
+//   position: absolute;
+//   top: -35px;
+//   left: 20px;
+// }
 
-.card.diamond.symboltop {
-  content: "\2660";
-}
-.card.diamond.symbolbottom {
-  content: "\2660";
-}
+// .symbolbottom {
+//   position: absolute;
+//   bottom: -8px;
+//   right: 20px;
+// }
 
-.card.ace.symboltop {
-  content: "\2660";
-}
-.card.ace.symbolbottom {
-  content: "\2660";
-}
+// .card.spade.symboltop {
+//   content: "\2660";
+// }
+// .card.spade.symbolbottom {
+//   content: "\2660";
+// }
 
-.card.club.symboltop {
-  content: "\2660";
-}
-.card.club.symbolbottom {
-  content: "\2660";
-}
+// .card.heart.symboltop {
+//   content: "\2661";
+// }
+// .card.heart.symbolbottom {
+//   content: "\2661";
+// }
+
+// .card.diamond.symboltop {
+//   content: "\2662";
+// }
+// .card.diamond.symbolbottom {
+//   content: "\2662";
+// }
+
+// .card.club.symboltop {
+//   content: "\2663";
+// }
+// .card.club.symbolbottom {
+//   content: "\2663";
+// }
